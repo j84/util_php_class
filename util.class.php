@@ -173,6 +173,16 @@ class util{
         elseif($langTo == 'fr') $data = $day.'/'.$month.'/'.$year;
         return $data;
     }
+	
+	#
+    # util::addDayToDate : adds or removes a period to a date
+    # Param : $add = period (+1 days, -3 months...)
+    # Return : date (now or US date)
+    #
+    public static function addDayToDate($add = '+1 days', $date = 'now'){
+		if($date == 'now') $date = date('Y-m-d');
+        return date('Y-m-d', strtotime($date.' '.$add));
+    }
     
     #
     # util::htmlTable : make HTML table
@@ -219,6 +229,6 @@ class util{
     
 }
 
-//var_dump(util::isMultiple(3, 2));
+//var_dump(util::addDayToDate('2016-12-01', '-1 months'));
 
 ?>
