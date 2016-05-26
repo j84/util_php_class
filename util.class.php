@@ -16,6 +16,7 @@
 # - util::readJsonFile : read and decode a json file
 # - util::uploadFile : upload a file
 # - util::formatDate : convert date to FR format
+# - util::addDayToDate : adds or removes a period to a date
 # - util::htmlTable : make HTML table
 # - util::htmlSelect : make select form element
 # - util::isMultiple : check if a number is multiple
