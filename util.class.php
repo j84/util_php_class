@@ -6,6 +6,7 @@
 # https://github.com/j84/util_php_class
 #
 # - util::sort2DimArray : sort two dimensions array
+# - util::explode_and_get : axplode an array and get a value by index
 # - util::cutStr : cut a string
 # - util::strToUrl : convert string to url
 # - util::isEmail : email checking
@@ -40,6 +41,17 @@ class util{
         array_multisort($temp, $mode, $data);
         return $data;
     }
+	
+	#
+    # util::explode_and_get : axplode an array and get a value by index
+    # Param : $str = string to explode, $separator = separator for explode function, index to get (0, 1, 2...)
+    # Return : value of array
+    #
+	public function explode_and_get($str, $separator, $key = 0){
+		$temp = @explode($separator, $str);
+		if(is_array($temp)) return $temp[$key];
+		else return $temp;
+	}
     
     #
     # util::cutStr : cut a string
