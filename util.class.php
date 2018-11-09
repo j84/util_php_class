@@ -21,6 +21,7 @@
 # - util::htmlTable : make HTML table
 # - util::htmlSelect : make select form element
 # - util::isMultiple : check if a number is multiple
+# - util::plural()
 #
 
 class util{
@@ -239,6 +240,10 @@ class util{
     	if($number % $multipleOff == 0) return true;
 		return false;
     }
+	
+	public static function plural($nb, $char = 's'){
+		if($nb > 1) return $char;
+	}
     
 }
 
